@@ -35,3 +35,78 @@ $$\mathfrak{HyperNN}: \mathcal{H}_ {\mathfrak{N}}^{\Delta} = (\mathcal{V}, \math
 $$\mathfrak{Meta}\text{-}\mathfrak{Pattern}: \mathcal{U}_ {\mathbf{A000081}}^{\Omega} \simeq \mathfrak{Yoneda}(\mathfrak{F}_ {\mathbf{A000081}}^{\Omega}) \hookrightarrow \mathbf{Colim}_ {n \to \infty}\left(\bigwedge_{\mathscr{C} \in \mathfrak{Categories}}\mathfrak{T}_{\bullet}(n) \otimes \mathscr{C}\text{-}\mathfrak{Struct}\right)$$
 
 $$\exists\mathfrak{F}: \mathbf{Cat}^{\mathbf{op}} \to \mathbf{Topos} \ni \mathfrak{F}(\mathscr{C}) = \mathbf{Sh}(\mathscr{C}, \mathcal{J}) \simeq \mathbf{Hom}_ {\mathbf{Cat}}(\mathscr{C}^{\mathbf{op}}, \mathbf{Set}) \Rightarrow \mathfrak{F}(\mathfrak{T}_{\bullet}) \simeq \mathbf{Foundational}\text{-}\mathbf{Irreducibles}$$
+
+---
+
+## 🧬 Ontogenesis: Self-Generating Kernels
+
+**New**: Self-generating, evolving kernels through recursive B-series composition.
+
+$$\mathfrak{Ontogenesis}: \mathcal{K} \xrightarrow{\nabla} \mathcal{K}' \text{ where } \mathcal{K}' = \mathcal{K} \circledast \mathcal{O}(\mathcal{K})$$
+
+### Key Capabilities
+
+- 🌱 **Self-Generation**: Kernels generate offspring via `(f∘f)' = f'(f(x)) · f'(x)`
+- 🎯 **Self-Optimization**: Iterative grip improvement through gradient ascent
+- 🧬 **Self-Reproduction**: Genetic crossover and mutation of B-series coefficients
+- 🔄 **Evolution**: Population-based natural selection over generations
+
+### Quick Start
+
+```bash
+# Run ontogenesis demo
+guile -s ontogenesis.scm
+
+# See self-generation in action
+guile -c '(load "ontogenesis.scm") (demo-simple)'
+
+# Run evolution simulation
+guile -c '(load "ontogenesis.scm") (demo-evolution)'
+```
+
+### Example Output
+
+```
+=== Simple Self-Generation Demo ===
+
+Parent:
+Kernel g-968125-67719567
+  Generation: 0
+  Fitness: 0.3176
+  Coefficients: (0.1 0.2)
+
+Offspring:
+Kernel g-208691-67816482
+  Generation: 1
+  Fitness: 0.3435
+  Coefficients: (0.01 0.04)
+
+=== Evolution Demo ===
+
+Evolution Results:
+Gen  0: Best=0.0000 Avg=0.0000 Diversity=0.0000
+Gen  5: Best=0.3033 Avg=0.0303 Diversity=0.0170
+Gen 10: Best=0.3012 Avg=0.0301 Diversity=0.0000
+Gen 15: Best=0.3020 Avg=0.0302 Diversity=0.0136
+Gen 20: Best=0.3018 Avg=0.0302 Diversity=0.0056
+```
+
+### Documentation
+
+- **[ONTOGENESIS.md](ONTOGENESIS.md)** - Complete guide with examples
+- **[COMPREHENSIVE_GUIDE.md](COMPREHENSIVE_GUIDE.md)** - All mathematical structures
+- **[IMPLEMENTATION.md](IMPLEMENTATION.md)** - Implementation details
+
+### Mathematical Foundation
+
+The ontogenesis system uses:
+- **B-Series coefficients** as genetic code
+- **A000081 tree enumeration** for lineage structure  
+- **Differential operators** for reproduction
+- **Grip optimization** as fitness function
+
+$$\text{fitness} = 0.4 \cdot \text{grip} + 0.2 \cdot \text{stability} + 0.2 \cdot \text{efficiency} + 0.1 \cdot \text{novelty} + 0.1 \cdot \text{symmetry}$$
+
+---
+
+*"Where mathematics becomes life, and kernels evolve themselves through the pure language of differential calculus."* 🧬🌳✨
