@@ -155,9 +155,9 @@
          (coverage (min 1.0 (/ (length coeffs) (* order 2))))
          ;; Efficiency: inverse of order
          (efficiency (/ 1.0 (+ 1.0 order))))
-    (* 0.4 stability
-       0.3 coverage
-       0.3 efficiency)))
+    (* (* 0.4 stability)
+       (* 0.3 coverage)
+       (* 0.3 efficiency))))
 
 ;; Calculate stability metric
 (define (calculate-stability kernel)
@@ -177,9 +177,11 @@
       0.5
       (let* ((distances (map (lambda (other)
                                (genetic-distance kernel other))
-                            population))
-             (avg-dist (/ (apply + distances) (length distances))))
-        (min 1.0 avg-dist))))
+                            population)))
+        (if (null? distances)
+            0.5
+            (let ((avg-dist (/ (apply + distances) (length distances))))
+              (min 1.0 avg-dist))))))
 
 ;; Calculate symmetry preservation
 (define (calculate-symmetry kernel)
@@ -218,8 +220,10 @@
          (min-len (min (length values1) (length values2))))
     (if (= min-len 0)
         1.0
-        (let* ((pairs (zip values1 values2))
-               (diffs (map (lambda (p) (abs (- (car p) (cadr p)))) pairs))
+        (let* ((v1-trunc (take values1 min-len))
+               (v2-trunc (take values2 min-len))
+               (pairs (map cons v1-trunc v2-trunc))
+               (diffs (map (lambda (p) (abs (- (car p) (cdr p)))) pairs))
                (avg-diff (/ (apply + diffs) min-len)))
           (min 1.0 avg-diff)))))
 
